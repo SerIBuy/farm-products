@@ -1,0 +1,20 @@
+.about {
+    position: relative;
+    padding: 183px 90px;
+    background-color: #d8ecfe;
+}
+
+.about::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 273px;
+    height: 544px;
+    bottom: 0;
+    right: 177px;
+    background-image: url("../../../assets/about-man.svg");
+}
+
+.about__description {
+    font-family: var(--general-font);
+}
