@@ -4,6 +4,8 @@
     font-weight: 700;
     font-size: 36px;
     line-height: 41px;
+    width: fit-content;
+    margin-bottom: 20px;
 }
 
 .title_small {
