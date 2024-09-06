@@ -1,12 +1,19 @@
 import Logo from "../../ui/logo/Logo";
 import Button from "../../ui/button/Button";
-import "./Header.css";
+import styled from "styled-components";
+
+const Styledheader = styled.header`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 90px;
+`;
 
 export default function Header() {
   return (
-    <header className="header">
+    <Styledheader>
       <Logo />
-      <Button minWidth={260}>Купить</Button>
-    </header>
+      <Button>Купить</Button>
+    </Styledheader>
   );
 }

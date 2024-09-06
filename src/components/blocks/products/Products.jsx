@@ -1,25 +1,22 @@
 import ProductCard from "../../ui/product-card/ProductCard";
 import Title from "../../ui/titles/Title";
 import Button from "../../ui/button/Button";
-import "./Products.css";
+import { StyledProducts, ProductsList, ProductsItem } from "./styled";
 
 export default function Products({ products }) {
   return (
-    <section className="products">
+    <StyledProducts>
       <Title hStyle="medium" level="2">
         Почему фермерские продукты лучше?
       </Title>
-      <ul className="products__list">
+      <ProductsList>
         {products.map((product) => (
-          <li
-            className={`products__item products__item--${product.type.toLowerCase()}`}
-            key={product.id}
-          >
+          <ProductsItem type={product.type} key={product.id}>
             <ProductCard {...product} />
-          </li>
+          </ProductsItem>
         ))}
-      </ul>
+      </ProductsList>
       <Button minWidth={260}>Купить</Button>
-    </section>
+    </StyledProducts>
   );
 }

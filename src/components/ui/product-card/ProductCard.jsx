@@ -1,33 +1,35 @@
 import Title from "../titles/Title";
-import "./ProductCard.css";
+import {
+  StyledProductCard,
+  ProductCardImage,
+  ProductCardType,
+  ProductCardDescription,
+} from "./styled";
 
 export const types = {
-  FARM: "Фермерские продукты",
-  STORE: "Магазинные продукты",
+  FARM: {
+    title: "Фермерские продукты",
+    bgColor: "#88aa4d",
+  },
+  STORE: {
+    title: "Магазинные продукты",
+    bgColor: "#f75531",
+  },
 };
 
 export default function ProductCard({ name, description, type, image, alt }) {
   return (
-    <article className="product-card">
-      <img
-        src={`../src/assets/${image}`}
-        className="product-card__image"
-        width={46}
-        height={46}
-        alt={alt}
-      />
-      <span
-        className={`product-card__type product-card__type--${type.toLowerCase()}`}
-      >
-        {types[type]}
-      </span>
+    <StyledProductCard>
+      <ProductCardImage src={`../../../assets/${image}`} alt={alt} />
+      <ProductCardType bgColor={types[type].bgColor}>
+        {types[type].title}
+      </ProductCardType>
       <Title hStyle="small" level="3">
         {name}
       </Title>
-      <p
-        className="product-card__description"
+      <ProductCardDescription
         dangerouslySetInnerHTML={{ __html: description }}
       />
-    </article>
+    </StyledProductCard>
   );
 }

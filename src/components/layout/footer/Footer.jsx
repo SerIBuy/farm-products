@@ -1,11 +1,11 @@
 import Logo from "../../ui/logo/Logo";
-import "./Footer.css";
+import { StyledFooter, StyledFooterText } from "./styled";
 
 export default function Footer() {
   return (
-    <footer className="main-footer">
+    <StyledFooter>
       <Logo />
-      <span className="logo__text-footer">Создано 2021</span>
-    </footer>
+      <StyledFooterText>Создано 2021</StyledFooterText>
+    </StyledFooter>
   );
 }

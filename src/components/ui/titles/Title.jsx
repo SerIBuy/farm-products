@@ -1,5 +1,4 @@
 import { styled } from "styled-components";
-import { H1, H2, H3 } from "../../elements";
 
 const TitleSize = {
   small: {
@@ -20,9 +19,11 @@ const TitleSize = {
 };
 
 function Title({ children, level, hStyle }) {
-  const Hlevel = `H${level}`;
+  const Hlevel = `h${level}`;
 
   const StyledTitle = styled(Hlevel)`
+    margin: 0;
+    padding: 0;
     font-weight: 700;
     font-size: ${(props) => props.hStyle && TitleSize[props.hStyle].fontSize}px;
     line-height: ${(props) =>
