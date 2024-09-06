@@ -1,12 +1,14 @@
 import ProductCard from "../../ui/product-card/ProductCard";
-import Title, { TitleSize } from "../../ui/title/Title";
+import Title from "../../ui/titles/Title";
 import Button from "../../ui/button/Button";
 import "./Products.css";
 
 export default function Products({ products }) {
   return (
     <section className="products">
-      <Title>Почему фермерские продукты лучше?</Title>
+      <Title hStyle="medium" level="2">
+        Почему фермерские продукты лучше?
+      </Title>
       <ul className="products__list">
         {products.map((product) => (
           <li

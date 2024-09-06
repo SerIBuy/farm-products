@@ -1,4 +1,4 @@
-import Title, { TitleSize } from "../title/Title";
+import Title from "../titles/Title";
 import "./ProductCard.css";
 
 export const types = {
@@ -21,7 +21,9 @@ export default function ProductCard({ name, description, type, image, alt }) {
       >
         {types[type]}
       </span>
-      <Title size={TitleSize.SMALL}>{name}</Title>
+      <Title hStyle="small" level="3">
+        {name}
+      </Title>
       <p
         className="product-card__description"
         dangerouslySetInnerHTML={{ __html: description }}
