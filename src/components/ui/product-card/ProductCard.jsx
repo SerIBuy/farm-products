@@ -20,11 +20,11 @@ export const types = {
 export default function ProductCard({ name, description, type, image, alt }) {
   return (
     <StyledProductCard>
-      <ProductCardImage src={`../../../assets/${image}`} alt={alt} />
+      <ProductCardImage src={image} alt={alt} />
       <ProductCardType bgColor={types[type].bgColor}>
         {types[type].title}
       </ProductCardType>
-      <Title hStyle="small" level="3">
+      <Title hStyle="small" as="h3">
         {name}
       </Title>
       <ProductCardDescription

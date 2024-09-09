@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { ButtonElement } from "../../elements";
 
-const StyledButton = styled(ButtonElement)`
+export const Button = styled(ButtonElement).attrs((props) => ({
+  children: props.children,
+}))`
   padding: 17px 98px;
   background-color: #fc9b27;
 
@@ -12,14 +14,12 @@ const StyledButton = styled(ButtonElement)`
   color: #ffffff;
 
   &:hover {
-    background-color: #ec8811;
+    background-color: #fc7427;
   }
 
   &:active {
-    background-color: #e57e03;
+    background-color: #fc7427;
   }
 `;
 
-export default function Button({ children }) {
-  return <StyledButton>{children}</StyledButton>;
-}
+export default Button;

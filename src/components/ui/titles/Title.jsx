@@ -18,22 +18,19 @@ const TitleSize = {
   },
 };
 
-function Title({ children, level, hStyle }) {
-  const Hlevel = `h${level}`;
-
-  const StyledTitle = styled(Hlevel)`
-    margin: 0;
-    padding: 0;
-    font-weight: 700;
-    font-size: ${(props) => props.hStyle && TitleSize[props.hStyle].fontSize}px;
-    line-height: ${(props) =>
-      props.hStyle && TitleSize[props.hStyle].lineHeight}px;
-    width: fit-content;
-    margin-bottom: ${(props) =>
-      props.hStyle && TitleSize[props.hStyle].marginBottom}px;
-  `;
-
-  return <StyledTitle hStyle={hStyle}>{children}</StyledTitle>;
-}
+const Title = styled.h1.attrs((props) => ({
+  children: props.children,
+  hStyle: props.hStyle,
+}))`
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: ${(props) => props.hStyle && TitleSize[props.hStyle].fontSize}px;
+  line-height: ${(props) =>
+    props.hStyle && TitleSize[props.hStyle].lineHeight}px;
+  width: fit-content;
+  margin-bottom: ${(props) =>
+    props.hStyle && TitleSize[props.hStyle].marginBottom}px;
+`;
 
 export { Title as default, TitleSize };

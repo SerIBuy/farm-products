@@ -1,10 +1,10 @@
-import { StyledLogo, StyledImgLogo, StyledSpanLogo } from "./styled";
-import logo from "../../../assets/logo.svg";
+import { StyledLogo, StyledSpanLogo } from "./styled";
+import ImageLogo from "./ImageLogo";
 
 export default function Logo() {
   return (
     <StyledLogo href="/">
-      <StyledImgLogo src={logo} alt="Логотип" />
+      <ImageLogo />
       <StyledSpanLogo>Фермерские продукты</StyledSpanLogo>
     </StyledLogo>
   );

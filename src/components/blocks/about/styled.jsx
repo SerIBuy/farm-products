@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import AboutMan from "../../../assets/about-man.svg";
 
 const StyledAbout = styled.section`
   position: relative;
@@ -12,7 +13,7 @@ const StyledAbout = styled.section`
     height: 544px;
     bottom: 0;
     right: 177px;
-    background: url("../../../assets/about-man.svg");
+    background: url(${AboutMan});
   }
 
   &::before {

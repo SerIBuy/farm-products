@@ -6,7 +6,7 @@ import { StyledProducts, ProductsList, ProductsItem } from "./styled";
 export default function Products({ products }) {
   return (
     <StyledProducts>
-      <Title hStyle="medium" level="2">
+      <Title hStyle="medium" as="h2">
         Почему фермерские продукты лучше?
       </Title>
       <ProductsList>

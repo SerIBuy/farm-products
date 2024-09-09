@@ -8,10 +8,6 @@ const StyledLogo = styled.a`
   color: #333333;
 `;
 
-const StyledImgLogo = styled.img`
-  display: block;
-`;
-
 const StyledSpanLogo = styled.span`
   font-family: "Inter", sans-serif;
   font-weight: 700;
@@ -19,4 +15,4 @@ const StyledSpanLogo = styled.span`
   line-height: 32px;
 `;
 
-export { StyledImgLogo, StyledSpanLogo, StyledLogo };
+export { StyledSpanLogo, StyledLogo };
