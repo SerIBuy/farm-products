@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { ButtonElement } from "../../elements";
+import { ButtonElement } from "../../styled";
 
 export const Button = styled(ButtonElement).attrs((props) => ({
   children: props.children,
 }))`
   padding: 17px 98px;
-  background-color: #fc9b27;
+  background-color: ${(props) => props.theme.colorButtons};
 
   font-weight: 700;
   font-size: 18px;
@@ -14,11 +14,11 @@ export const Button = styled(ButtonElement).attrs((props) => ({
   color: #ffffff;
 
   &:hover {
-    background-color: #fc7427;
+    background-color: ${(props) => props.theme.colorButtonsHover};
   }
 
   &:active {
-    background-color: #fc7427;
+    background-color: ${(props) => props.theme.colorButtonsHover};
   }
 `;
 
