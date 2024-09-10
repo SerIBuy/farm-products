@@ -6,9 +6,7 @@ import { StyledProducts, ProductsList, ProductsItem } from "./styled";
 export default function Products({ products }) {
   return (
     <StyledProducts>
-      <Title hStyle="medium" as="h2">
-        Почему фермерские продукты лучше?
-      </Title>
+      <Title hstyle="medium">Почему фермерские продукты лучше?</Title>
       <ProductsList>
         {products.map((product) => (
           <ProductsItem type={product.type} key={product.id}>
@@ -16,7 +14,7 @@ export default function Products({ products }) {
           </ProductsItem>
         ))}
       </ProductsList>
-      <Button minWidth={260}>Купить</Button>
+      <Button>Купить</Button>
     </StyledProducts>
   );
 }

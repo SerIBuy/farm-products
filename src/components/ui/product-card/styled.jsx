@@ -21,7 +21,7 @@ const ProductCardType = styled.span`
   padding: 2px 10px;
   margin-bottom: 4px;
   width: fit-content;
-  background-color: ${(props) => props.bgColor};
+  background-color: ${(props) => props.bgcolor};
 
   grid-area: 1 / 2 / 2 / 3;
 `;

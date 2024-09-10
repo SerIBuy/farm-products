@@ -32,8 +32,4 @@ const StyledAboutWrapper = styled.div`
   width: 637px;
 `;
 
-const StyledAboutDescription = styled.p`
-  font-family: var(--general-font);
-`;
-
-export { StyledAbout, StyledAboutWrapper, StyledAboutDescription };
+export { StyledAbout, StyledAboutWrapper };

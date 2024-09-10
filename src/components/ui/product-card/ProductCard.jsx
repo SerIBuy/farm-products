@@ -9,11 +9,11 @@ import {
 export const types = {
   FARM: {
     title: "Фермерские продукты",
-    bgColor: "#88aa4d",
+    bgcolor: "#88aa4d",
   },
   STORE: {
     title: "Магазинные продукты",
-    bgColor: "#f75531",
+    bgcolor: "#f75531",
   },
 };
 
@@ -21,12 +21,10 @@ export default function ProductCard({ name, description, type, image, alt }) {
   return (
     <StyledProductCard>
       <ProductCardImage src={image} alt={alt} />
-      <ProductCardType bgColor={types[type].bgColor}>
+      <ProductCardType bgcolor={types[type].bgcolor}>
         {types[type].title}
       </ProductCardType>
-      <Title hStyle="small" as="h3">
-        {name}
-      </Title>
+      <Title hstyle="small">{name}</Title>
       <ProductCardDescription
         dangerouslySetInnerHTML={{ __html: description }}
       />

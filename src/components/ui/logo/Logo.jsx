@@ -1,5 +1,5 @@
 import { StyledLogo, StyledSpanLogo } from "./styled";
-import ImageLogo from "./ImageLogo";
+import { ReactComponent as ImageLogo } from "../../../assets/logo.svg";
 
 export default function Logo() {
   return (
