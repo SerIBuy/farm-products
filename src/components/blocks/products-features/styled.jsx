@@ -5,14 +5,14 @@ const productColor = {
   STORE: "#f8ddd7",
 };
 
-const StyledProducts = styled.section`
+const StyledProductsFeatures = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 100px 90px 100px;
 `;
 
-const ProductsList = styled.ul`
+const ProductsfeaturesList = styled.ul`
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -25,10 +25,10 @@ const ProductsList = styled.ul`
   justify-content: center;
 `;
 
-const ProductsItem = styled.li`
+const ProductsFeaturesItem = styled.li`
   width: 540px;
   height: 197px;
   background-color: ${(props) => props.type && productColor[props.type]};
 `;
 
-export { StyledProducts, ProductsList, ProductsItem };
+export { StyledProductsFeatures, ProductsfeaturesList, ProductsFeaturesItem };

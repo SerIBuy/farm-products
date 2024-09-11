@@ -1,5 +1,5 @@
 import About from "../../blocks/about/About";
-import Products from "../../blocks/products/Products";
+import Products from "../../blocks/products-features/ProductsFeatures";
 
 export default function MainPage({ products }) {
   return (
