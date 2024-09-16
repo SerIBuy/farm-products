@@ -1,11 +1,11 @@
 import About from "../../blocks/about/About";
-import Products from "../../blocks/products-features/ProductsFeatures";
+import ProductsFeatures from "../../blocks/products-features/ProductsFeatures";
 
-export default function MainPage({ products }) {
+export default function MainPage({ features }) {
   return (
-    <>
+    <main>
       <About />
-      <Products products={products} />
-    </>
+      <ProductsFeatures features={features} />
+    </main>
   );
 }

@@ -7,14 +7,14 @@ import {
   ProductsFeaturesItem,
 } from "./styled";
 
-export default function ProductsFeatures({ products }) {
+export default function ProductsFeatures({ features }) {
   return (
     <StyledProductsFeatures>
       <Title hstyle="medium">Почему фермерские продукты лучше?</Title>
       <ProductsfeaturesList>
-        {products.map((product) => (
-          <ProductsFeaturesItem type={product.type} key={product.id}>
-            <FeatureItem {...product} />
+        {features.map((feature) => (
+          <ProductsFeaturesItem type={feature.type} key={feature.id}>
+            <FeatureItem {...feature} />
           </ProductsFeaturesItem>
         ))}
       </ProductsfeaturesList>
