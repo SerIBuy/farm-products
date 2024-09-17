@@ -1,4 +1,10 @@
-import StyledFilter from "./styled";
+import {
+  StyledFilter,
+  FilterList,
+  FilterItem,
+  Filterlabel,
+  FilterInput,
+} from "./styled";
 import Title from "../../ui/titles/Title";
 
 export default function Filter({ products }) {
@@ -6,11 +12,16 @@ export default function Filter({ products }) {
     <StyledFilter>
       <Title hstyle="small">Выберите продукты</Title>
       <form action="">
-        <ul>
+        <FilterList>
           {products &&
             products.length &&
-            products.map((product) => <li>{product.title}</li>)}
-        </ul>
+            products.map((product) => (
+              <FilterItem>
+                <Filterlabel>{product.title}</Filterlabel>
+                <FilterInput type="checkbox" />
+              </FilterItem>
+            ))}
+        </FilterList>
       </form>
     </StyledFilter>
   );

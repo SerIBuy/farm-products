@@ -19,6 +19,12 @@ const TitleSize = {
     lineHeight: "50",
     marginBottom: "24",
   },
+  title: {
+    level: "2",
+    fontSize: "24",
+    lineHeight: "31",
+    marginBottom: "16",
+  },
 };
 
 const StyledTitle = styled.h1`
