@@ -16,12 +16,10 @@ const ProductImage = styled.img`
   grid-area: 1 / 1 / 5 / 2;
 `;
 
-const ProductDescription = styled.p``;
-
 const ProductPriceWeight = styled.span`
   background-color: #d8ecfe;
   width: fit-content;
   padding: 4px 8px;
 `;
 
-export { StyledProduct, ProductImage, ProductDescription, ProductPriceWeight };
+export { StyledProduct, ProductImage, ProductPriceWeight };

@@ -1,9 +1,4 @@
-import {
-  StyledProduct,
-  ProductImage,
-  ProductDescription,
-  ProductPriceWeight,
-} from "./styled";
+import { StyledProduct, ProductImage } from "./styled";
 import Title from "../../ui/titles/Title";
 import ProductTabs from "../product-tabs/ProductTabs";
 
@@ -17,9 +12,7 @@ export default function Product({ product }) {
         alt={product.title}
       />
       <Title hstyle="title">{product.title}</Title>
-      <ProductTabs></ProductTabs>
-      <ProductDescription>{product.description}</ProductDescription>
-      <ProductPriceWeight>{product.pricePerWeight}</ProductPriceWeight>
+      <ProductTabs product={product}></ProductTabs>
     </StyledProduct>
   );
 }
