@@ -55,10 +55,13 @@ export const products = [
       nutritionalValue:
         "белки - 13,8 г., жиры - 8,7 г., углеводы - 0 г.; на 100 г.",
     },
-    pricePerWeight: "400 руб. / 700 гр.",
+    pricePerWeight: {
+      weight: "700 гр.",
+      price: "400 р.",
+    },
   },
   {
-    id: 0,
+    id: 1,
     image: "#",
     title: "Филе бедра гуся",
     description:
@@ -74,10 +77,13 @@ export const products = [
       nutritionalValue:
         "белки - 13,8 г., жиры - 8,7 г., углеводы - 0 г.; на 100 г.",
     },
-    pricePerWeight: "400 руб. / 700 гр.",
+    pricePerWeight: {
+      weight: "700 гр.",
+      price: "400 р.",
+    },
   },
   {
-    id: 0,
+    id: 2,
     image: "#",
     title: "Мякоть бедра говяжья",
     description:
@@ -93,10 +99,13 @@ export const products = [
       nutritionalValue:
         "белки - 13,8 г., жиры - 8,7 г., углеводы - 0 г.; на 100 г.",
     },
-    pricePerWeight: "400 руб. / 700 гр.",
+    pricePerWeight: {
+      weight: "700 гр.",
+      price: "400 р.",
+    },
   },
   {
-    id: 0,
+    id: 3,
     image: "#",
     title: "Грудка цыпленка на кости",
     description:
@@ -112,10 +121,13 @@ export const products = [
       nutritionalValue:
         "белки - 13,8 г., жиры - 8,7 г., углеводы - 0 г.; на 100 г.",
     },
-    pricePerWeight: "400 руб. / 700 гр.",
+    pricePerWeight: {
+      weight: "700 гр.",
+      price: "400 р.",
+    },
   },
   {
-    id: 0,
+    id: 4,
     image: "#",
     title: "Голень цыпленка",
     description:
@@ -131,6 +143,9 @@ export const products = [
       nutritionalValue:
         "белки - 13,8 г., жиры - 8,7 г., углеводы - 0 г.; на 100 г.",
     },
-    pricePerWeight: "400 руб. / 700 гр.",
+    pricePerWeight: {
+      weight: "700 гр.",
+      price: "400 р.",
+    },
   },
 ];

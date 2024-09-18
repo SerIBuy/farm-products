@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { StyledProductTabs } from "./styled";
 import { ProductTab, ProductTabItem } from "../product-tab/ProductTab";
-import ProductDescription from "../product-description/ProductDescription";
+import ProductInfo from "../product-info/ProductInfo";
 
 const productTabs = [
   {
@@ -63,12 +63,8 @@ export default function ProductTabs({ product }) {
               </ProductTabItem>
             );
           })}
-        {/* <ProductPriceWeight>{product.pricePerWeight}</ProductPriceWeight> */}
       </StyledProductTabs>
-      <ProductDescription
-        tabType={productTabs[activeTab].type}
-        product={product}
-      />
+      <ProductInfo tabType={productTabs[activeTab].type} product={product} />
     </>
   );
 }

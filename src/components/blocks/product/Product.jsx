@@ -3,6 +3,7 @@ import Title from "../../ui/titles/Title";
 import ProductTabs from "../product-tabs/ProductTabs";
 
 export default function Product({ product }) {
+  console.log(product);
   return (
     <StyledProduct>
       <ProductImage

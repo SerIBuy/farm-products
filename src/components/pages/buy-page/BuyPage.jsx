@@ -7,13 +7,21 @@ import { products } from "../../../mocks/mocks";
 import { useState } from "react";
 
 export default function BuyPage() {
-  const [filter, setFilter] = useState();
+  const [filters, setFilter] = useState([]);
+  function inputHandler() {
+    let inputs = [];
+    const checkedFilters = document.querySelectorAll(
+      "#filter-form input:checked"
+    );
+    checkedFilters.forEach((element) => inputs.push(products[element.id]));
+    setFilter(inputs);
+  }
   return (
     <ProductProvider value={products}>
       <MainBuyPage>
-        <Filter />
+        <Filter changeInput={() => inputHandler()} />
         <MakeOrder />
-        <ProductsList />
+        <ProductsList checkedFilters={filters} />
       </MainBuyPage>
     </ProductProvider>
   );

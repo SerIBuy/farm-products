@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
-const StyledProductDescription = styled.div``;
+const StyledProductDescription = styled.p`
+  margin: 0;
+  padding: 0;
+`;
 
-export default StyledProductDescription;
+export { StyledProductDescription };
