@@ -3,13 +3,13 @@ import BuyPage from "../../pages/buy-page/BuyPage";
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
 
-export default function PageWrapper({ ...props }) {
+export default function PageWrapper() {
   return (
     <>
       <div>
         <Header />
-        {/* <MainPage {...props} /> */}
-        <BuyPage {...props} />
+        {/* <MainPage /> */}
+        <BuyPage />
         <Footer />
       </div>
     </>

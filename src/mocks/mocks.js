@@ -1,4 +1,4 @@
-export const featuresData = [
+export const features = [
   {
     id: 0,
     name: "Еда намного вкуснее",

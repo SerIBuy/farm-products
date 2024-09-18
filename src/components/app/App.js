@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <PageWrapper features={featuresData} />
+      <PageWrapper />
     </>
   );
 }

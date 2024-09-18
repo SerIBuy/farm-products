@@ -5,7 +5,9 @@ const ProductTab = styled.span`
   padding: 8px 12px;
   border: none;
 
-  ${(props) => props.activeTabStyle};
+  ${(props) => props.activetabstyle};
 `;
 
-export default ProductTab;
+const ProductTabItem = styled.li``;
+
+export { ProductTab, ProductTabItem };

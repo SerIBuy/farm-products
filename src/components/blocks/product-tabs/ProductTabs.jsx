@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { StyledProductTabs } from "./styled";
-import ProductTab from "../product-tab/ProductTab";
+import { ProductTab, ProductTabItem } from "../product-tab/ProductTab";
 import ProductDescription from "../product-description/ProductDescription";
 
 const productTabs = [
@@ -43,21 +43,24 @@ export default function ProductTabs({ product }) {
           productTabs.map((tab, index) => {
             if (index === activeTab) {
               return (
-                <>
-                  <ProductTab activeTabStyle={activeTabStyle}>
+                <ProductTabItem>
+                  <ProductTab activetabstyle={activeTabStyle} key={index}>
                     {tab.title}
                   </ProductTab>
-                </>
+                </ProductTabItem>
               );
             }
             return (
-              <ProductTab
-                as="button"
-                style={buttonStyle}
-                onClick={() => setActiveTab(index)}
-              >
-                {tab.title}
-              </ProductTab>
+              <ProductTabItem>
+                <ProductTab
+                  as="button"
+                  style={buttonStyle}
+                  onClick={() => setActiveTab(index)}
+                  key={index}
+                >
+                  {tab.title}
+                </ProductTab>
+              </ProductTabItem>
             );
           })}
         {/* <ProductPriceWeight>{product.pricePerWeight}</ProductPriceWeight> */}

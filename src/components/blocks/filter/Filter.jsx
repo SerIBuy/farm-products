@@ -6,8 +6,11 @@ import {
   FilterInput,
 } from "./styled";
 import Title from "../../ui/titles/Title";
+import { useContext } from "react";
+import { ProductContext } from "../product-context";
 
-export default function Filter({ products }) {
+export default function Filter({ changeInput }) {
+  const products = useContext(ProductContext);
   return (
     <StyledFilter>
       <Title hstyle="small">Выберите продукты</Title>
@@ -15,10 +18,10 @@ export default function Filter({ products }) {
         <FilterList>
           {products &&
             products.length &&
-            products.map((product) => (
-              <FilterItem>
+            products.map((product, index) => (
+              <FilterItem key={index}>
                 <Filterlabel>{product.title}</Filterlabel>
-                <FilterInput type="checkbox" />
+                <FilterInput type="checkbox" onChange={() => changeInput} />
               </FilterItem>
             ))}
         </FilterList>
