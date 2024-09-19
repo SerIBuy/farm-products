@@ -56,8 +56,8 @@ export const products = [
         "белки - 13,8 г., жиры - 8,7 г., углеводы - 0 г.; на 100 г.",
     },
     pricePerWeight: {
-      weight: "700 гр.",
-      price: "400 р.",
+      weight: "700",
+      price: "400",
     },
   },
   {
@@ -78,8 +78,8 @@ export const products = [
         "белки - 13,8 г., жиры - 8,7 г., углеводы - 0 г.; на 100 г.",
     },
     pricePerWeight: {
-      weight: "700 гр.",
-      price: "400 р.",
+      weight: "700",
+      price: "400",
     },
   },
   {
@@ -100,8 +100,8 @@ export const products = [
         "белки - 13,8 г., жиры - 8,7 г., углеводы - 0 г.; на 100 г.",
     },
     pricePerWeight: {
-      weight: "700 гр.",
-      price: "400 р.",
+      weight: "700",
+      price: "400",
     },
   },
   {
@@ -122,8 +122,8 @@ export const products = [
         "белки - 13,8 г., жиры - 8,7 г., углеводы - 0 г.; на 100 г.",
     },
     pricePerWeight: {
-      weight: "700 гр.",
-      price: "400 р.",
+      weight: "700",
+      price: "400",
     },
   },
   {
@@ -144,8 +144,8 @@ export const products = [
         "белки - 13,8 г., жиры - 8,7 г., углеводы - 0 г.; на 100 г.",
     },
     pricePerWeight: {
-      weight: "700 гр.",
-      price: "400 р.",
+      weight: "700",
+      price: "400",
     },
   },
 ];

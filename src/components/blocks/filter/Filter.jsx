@@ -24,7 +24,7 @@ export default function Filter({ changeInput }) {
                 <Filterlabel>{product.title}</Filterlabel>
                 <FilterInput
                   type="checkbox"
-                  onChange={changeInput}
+                  onChange={(evt) => changeInput(evt.target.id)}
                   id={product.id}
                   name="filter"
                 />

@@ -1,15 +1,15 @@
 import { StyledProductsList } from "./styled";
 import Product from "../product/Product";
+import { useContext } from "react";
+import { ProductContext } from "../product-context";
 
-export default function ProductsList({ checkedFilters }) {
-  console.log(checkedFilters);
+export default function ProductsList() {
+  const products = useContext(ProductContext);
   return (
     <StyledProductsList>
-      {checkedFilters && checkedFilters.length < 1 ? (
-        <span>Выберите продукты для заказа</span>
-      ) : (
-        checkedFilters.map((element) => <Product product={element} />)
-      )}
+      {products &&
+        products.length &&
+        products.map((element) => <Product product={element} />)}
     </StyledProductsList>
   );
 }

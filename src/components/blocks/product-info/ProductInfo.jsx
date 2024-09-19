@@ -13,7 +13,7 @@ export default function ProductInfo({ tabType, product }) {
             <>
               <ProductDescription>{product[tabType]}</ProductDescription>
               <ProductPriceWeight>
-                {`${product.pricePerWeight.price} / ${product.pricePerWeight.weight}`}
+                {`${product.pricePerWeight.price} р. / ${product.pricePerWeight.weight} гр.`}
               </ProductPriceWeight>
             </>
           );
