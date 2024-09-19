@@ -4,7 +4,7 @@ import ProductTabs from "../product-tabs/ProductTabs";
 
 export default function Product({ product }) {
   return (
-    <StyledProduct id={product.id}>
+    <StyledProduct article-name={product.id}>
       <ProductImage
         src={product.image}
         width="248"

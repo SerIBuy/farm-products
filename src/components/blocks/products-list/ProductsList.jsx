@@ -7,9 +7,11 @@ export default function ProductsList() {
   const products = useContext(ProductContext);
   return (
     <StyledProductsList>
-      {products &&
-        products.length &&
-        products.map((element) => <Product product={element} />)}
+      {products && products.length > 1 ? (
+        products.map((element) => <Product product={element} />)
+      ) : (
+        <span>Продукты были слишком вкусные и их разобрали.</span>
+      )}
     </StyledProductsList>
   );
 }

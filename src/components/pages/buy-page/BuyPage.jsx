@@ -16,7 +16,10 @@ export default function BuyPage() {
     let inputs = [];
     let sum = 0;
 
-    document.getElementById(id).scrollIntoView(true);
+    let checkedFilter = document.querySelector(`[article-name="${id}"]`);
+    if (document.getElementById(id).checked) {
+      checkedFilter.scrollIntoView(true);
+    }
 
     const checkedFilters = document.querySelectorAll(
       "#filter-form input:checked"

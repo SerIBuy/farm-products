@@ -17,8 +17,7 @@ export default function Filter({ changeInput }) {
       <Title hstyle="small">Выберите продукты</Title>
       <form action="#" ref={divForm} id="filter-form">
         <FilterList>
-          {products &&
-            products.length &&
+          {products && products.length > 1 ? (
             products.map((product, index) => (
               <FilterItem key={index}>
                 <Filterlabel>{product.title}</Filterlabel>
@@ -29,7 +28,10 @@ export default function Filter({ changeInput }) {
                   name="filter"
                 />
               </FilterItem>
-            ))}
+            ))
+          ) : (
+            <span>Пока нечего выбрать...</span>
+          )}
         </FilterList>
       </form>
     </StyledFilter>
