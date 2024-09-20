@@ -14,15 +14,10 @@ const OrderForm = styled.form`
   flex-direction: column;
 `;
 
-const OrderInput = styled.input`
-  width: 313px;
-  padding: 13px;
-`;
-
 const OrderPrice = styled.span`
   font-size: 24px;
   font-weight: 700;
   line-height: 31px;
 `;
 
-export { StyledOrder, OrderForm, OrderInput, OrderPrice };
+export { StyledOrder, OrderForm, OrderPrice };

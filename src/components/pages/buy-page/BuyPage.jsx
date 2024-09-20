@@ -6,14 +6,17 @@ import SideBar from "../../blocks/sidebar/SideBar";
 import { ProductProvider } from "../../blocks/product-context";
 import { products } from "../../../mocks/mocks";
 import { useState } from "react";
+import { OrderForm } from "../../blocks/make-order/styled";
 
 export default function BuyPage() {
   const [filters, setFilter] = useState([]);
   let [sumOrder, setSumOrder] = useState(0);
+  const [isButtonDisable, setIsButtonDisable] = useState(true);
+  const [orderInput, setOrderInput] = useState("");
 
-  function inputHandler(id) {
-    console.log(id);
-    let inputs = [];
+  let inputs = [];
+
+  function inputFilterHandler(id) {
     let sum = 0;
 
     let checkedFilter = document.querySelector(`[article-name="${id}"]`);
@@ -33,13 +36,34 @@ export default function BuyPage() {
     inputs.map((el) => (sum += parseInt(products[el.id].pricePerWeight.price)));
 
     setSumOrder(sum);
+
+    console.log(inputs);
+    console.log(orderInput);
+
+    inputs.length > 0 && orderInput.length > 0
+      ? setIsButtonDisable(false)
+      : setIsButtonDisable(true);
   }
+
+  function orderInputHandler(value) {
+    value.length > 0 && filters.length > 0
+      ? setIsButtonDisable(false)
+      : setIsButtonDisable(true);
+
+    setOrderInput(value);
+  }
+
   return (
     <ProductProvider value={products}>
       <MainBuyPage>
         <SideBar>
-          <Filter changeInput={(id) => inputHandler(id)} />
-          <MakeOrder priceOrder={sumOrder} />
+          <Filter changeInput={(id) => inputFilterHandler(id)} />
+          <MakeOrder
+            priceOrder={sumOrder}
+            buttonDisable={isButtonDisable}
+            value={orderInput}
+            enterInput={(value) => orderInputHandler(value)}
+          />
         </SideBar>
         <ProductsList checkedFilters={filters} />
       </MainBuyPage>

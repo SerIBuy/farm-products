@@ -12,12 +12,17 @@ export const StyledButton = styled(ButtonElement)`
   color: #ffffff;
   text-decoration: none;
 
-  &:hover {
+  &:not(:disabled):hover {
     background-color: ${(props) => props.theme.colorButtonsHover};
   }
 
-  &:active {
+  &:not(:disabled):active {
     background-color: ${(props) => props.theme.colorButtonsHover};
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: default;
   }
 `;
 
