@@ -1,9 +1,14 @@
 import { StyledButton } from "./styled";
 
-export default function Button({ children, link, buttonDisabling }) {
+export default function Button({
+  children,
+  link,
+  buttonDisabling,
+  onButtonClick,
+}) {
   return (
     <StyledButton
-      onClick={() => console.log("нажата кнопка Купить")}
+      onClick={onButtonClick}
       {...(link ? { href: link, as: "a" } : { type: "button" })}
       disabled={buttonDisabling}
     >

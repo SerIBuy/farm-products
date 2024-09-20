@@ -6,13 +6,14 @@ import SideBar from "../../blocks/sidebar/SideBar";
 import { ProductProvider } from "../../blocks/product-context";
 import { products } from "../../../mocks/mocks";
 import { useState } from "react";
-import { OrderForm } from "../../blocks/make-order/styled";
+import OrderPopup from "../../blocks/order-popup/OrderPopup";
 
 export default function BuyPage() {
   const [filters, setFilter] = useState([]);
   let [sumOrder, setSumOrder] = useState(0);
   const [isButtonDisable, setIsButtonDisable] = useState(true);
   const [orderInput, setOrderInput] = useState("");
+  const [isShowPopup, setIsShowPopup] = useState(false);
 
   let inputs = [];
 
@@ -37,9 +38,6 @@ export default function BuyPage() {
 
     setSumOrder(sum);
 
-    console.log(inputs);
-    console.log(orderInput);
-
     inputs.length > 0 && orderInput.length > 0
       ? setIsButtonDisable(false)
       : setIsButtonDisable(true);
@@ -63,9 +61,17 @@ export default function BuyPage() {
             buttonDisable={isButtonDisable}
             value={orderInput}
             enterInput={(value) => orderInputHandler(value)}
+            onOrderButtonClick={() => setIsShowPopup(true)}
           />
         </SideBar>
         <ProductsList checkedFilters={filters} />
+        {isShowPopup ? (
+          <OrderPopup
+            listOrder={filters}
+            price={sumOrder}
+            onClose={() => setIsShowPopup(false)}
+          ></OrderPopup>
+        ) : null}
       </MainBuyPage>
     </ProductProvider>
   );

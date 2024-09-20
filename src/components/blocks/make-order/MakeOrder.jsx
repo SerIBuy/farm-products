@@ -8,6 +8,7 @@ export default function MakeOrder({
   buttonDisable,
   enterInput,
   value,
+  onOrderButtonClick,
 }) {
   return (
     <StyledOrder>
@@ -20,7 +21,12 @@ export default function MakeOrder({
         />
         <span>Цена</span>
         <OrderPrice>{priceOrder} р.</OrderPrice>
-        <Button buttonDisabling={buttonDisable}>Купить</Button>
+        <Button
+          buttonDisabling={buttonDisable}
+          onButtonClick={onOrderButtonClick}
+        >
+          Купить
+        </Button>
       </OrderForm>
     </StyledOrder>
   );

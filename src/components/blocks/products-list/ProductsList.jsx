@@ -8,7 +8,9 @@ export default function ProductsList() {
   return (
     <StyledProductsList>
       {products && products.length > 1 ? (
-        products.map((element) => <Product product={element} />)
+        products.map((element, index) => (
+          <Product product={element} key={index} />
+        ))
       ) : (
         <span>Продукты были слишком вкусные и их разобрали.</span>
       )}
