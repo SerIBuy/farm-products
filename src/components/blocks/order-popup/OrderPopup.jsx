@@ -2,14 +2,14 @@ import {
   StyledOrderPopup,
   PopupList,
   PopupItem,
-  PopupSumSpan,
+  PopupSpan,
   PopupClose,
 } from "./styled";
 import Title from "../../ui/titles/Title";
 import Button from "../../ui/button/Button";
 import { useEffect, useRef } from "react";
 
-export default function OrderPopup({ listOrder, price, onClose }) {
+export default function OrderPopup({ listOrder, price, adress, onClose }) {
   const closeRef = useRef(null);
 
   const escKeydownHandler = (evt) => (evt.key === "Escape" ? onClose() : null);
@@ -29,7 +29,9 @@ export default function OrderPopup({ listOrder, price, onClose }) {
           listOrder.length &&
           listOrder.map((item) => <PopupItem>{item.title}</PopupItem>)}
       </PopupList>
-      <span>Сумма заказа: </span> <PopupSumSpan>{price}</PopupSumSpan>
+      <b>Сумма заказа: </b> <PopupSpan>{price} р.</PopupSpan>
+      <br />
+      <b>Адрес доставки: </b> <PopupSpan>{adress}</PopupSpan>
       <Button onButtonClick={onClose}>Оплатить</Button>
       <PopupClose onClick={onClose} ref={closeRef} />
     </StyledOrderPopup>

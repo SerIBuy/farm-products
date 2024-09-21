@@ -19,7 +19,7 @@ export const PopupList = styled.ol`
 
 export const PopupItem = styled.li``;
 
-export const PopupSumSpan = styled.span`
+export const PopupSpan = styled.span`
   display: inline-block;
   margin-bottom: 30px;
 `;

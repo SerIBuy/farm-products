@@ -4,6 +4,7 @@ import {
   FilterItem,
   Filterlabel,
   FilterInput,
+  CustomInput,
 } from "./styled";
 import Title from "../../ui/titles/Title";
 import { useContext, useRef } from "react";
@@ -20,13 +21,16 @@ export default function Filter({ changeInput }) {
           {products && products.length > 1 ? (
             products.map((product, index) => (
               <FilterItem key={index}>
-                <Filterlabel>{product.title}</Filterlabel>
-                <FilterInput
-                  type="checkbox"
-                  onChange={(evt) => changeInput(evt.target.id)}
-                  id={product.id}
-                  name="filter"
-                />
+                <Filterlabel>
+                  {product.title}
+                  <FilterInput
+                    type="checkbox"
+                    onChange={(evt) => changeInput(evt.target.id)}
+                    id={product.id}
+                    name="filter"
+                  />
+                  <CustomInput />
+                </Filterlabel>
               </FilterItem>
             ))
           ) : (

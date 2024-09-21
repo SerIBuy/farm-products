@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { ButtonElement } from "../../styled";
 
 export const StyledButton = styled(ButtonElement)`
-  padding: 17px 98px;
+  padding: 17px 106px;
   background-color: ${(props) => props.theme.colorButtons};
 
   font-weight: 700;
@@ -11,6 +11,7 @@ export const StyledButton = styled(ButtonElement)`
   text-align: center;
   color: #ffffff;
   text-decoration: none;
+  width: 314px;
 
   &:not(:disabled):hover {
     background-color: ${(props) => props.theme.colorButtonsHover};

@@ -69,6 +69,7 @@ export default function BuyPage() {
           <OrderPopup
             listOrder={filters}
             price={sumOrder}
+            adress={orderInput}
             onClose={() => setIsShowPopup(false)}
           ></OrderPopup>
         ) : null}

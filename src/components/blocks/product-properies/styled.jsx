@@ -5,15 +5,14 @@ const StyledProductProperties = styled.ul`
   padding: 0;
 `;
 
-const ProductPropertiesItem = styled.li`
-  display: flex;
-  gap: 6px;
-`;
+const ProductPropertiesItem = styled.li``;
 
 const ProductPropertiesTitle = styled.span`
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
+  white-space: nowrap;
+  margin-right: 6px;
 `;
 
 const ProductPropertiesValue = styled.span`
