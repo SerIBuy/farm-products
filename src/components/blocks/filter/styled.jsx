@@ -28,20 +28,21 @@ const FilterInput = styled.input`
   &:checked ~ span::before {
     content: "";
     position: absolute;
-    width: 16px;
-    height: 12px;
+    width: 24px;
+    height: 24px;
+    background-color: #fc9b27;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     background-image: url(${inputArrow});
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 `;
 
 const CustomInput = styled.span`
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 24px;
   height: 24px;
-  background-color: #fc9b27;
+  background-color: #f6f6f6;
   border: 1px solid rgba(0, 0, 0, 0.1);
 `;
 

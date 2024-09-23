@@ -8,5 +8,5 @@ export const StyledSideBar = styled.aside`
   gap: 18px;
 
   position: sticky;
-  top: 40px;
+  top: 90px;
 `;

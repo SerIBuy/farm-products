@@ -7,6 +7,7 @@ import { ProductProvider } from "../../blocks/product-context";
 import { products } from "../../../mocks/mocks";
 import { useState } from "react";
 import OrderPopup from "../../blocks/order-popup/OrderPopup";
+import Slider from "../../blocks/slider/Slider";
 
 export default function BuyPage() {
   const [filters, setFilter] = useState([]);
@@ -64,7 +65,8 @@ export default function BuyPage() {
             onOrderButtonClick={() => setIsShowPopup(true)}
           />
         </SideBar>
-        <ProductsList checkedFilters={filters} />
+        {/* <ProductsList /> */}
+        <Slider />
         {isShowPopup ? (
           <OrderPopup
             listOrder={filters}
