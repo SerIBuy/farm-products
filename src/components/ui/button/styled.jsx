@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { ButtonElement } from "../../styled";
+import { Link } from "react-router-dom";
 
-export const StyledButton = styled(ButtonElement)`
+export const StyledButton = styled(Link)`
+  box-sizing: border-box;
   padding: 17px 106px;
   background-color: ${(props) => props.theme.colorButtons};
 

@@ -1,10 +1,18 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-const StyledLogo = styled.a`
+const StyledLogoActive = styled(Link)`
   display: flex;
   align-items: center;
   column-gap: 24px;
   text-decoration: none;
+  color: #333333;
+`;
+
+const StyledLogoCurrent = styled.div`
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
   color: #333333;
 `;
 
@@ -15,4 +23,4 @@ const StyledSpanLogo = styled.span`
   line-height: 32px;
 `;
 
-export { StyledSpanLogo, StyledLogo };
+export { StyledSpanLogo, StyledLogoActive, StyledLogoCurrent };

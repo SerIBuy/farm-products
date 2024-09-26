@@ -23,6 +23,7 @@ const ProductsfeaturesList = styled.ul`
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  width: 1100px;
 `;
 
 const ProductsFeaturesItem = styled.li`

@@ -65,8 +65,8 @@ export default function BuyPage() {
             onOrderButtonClick={() => setIsShowPopup(true)}
           />
         </SideBar>
-        {/* <ProductsList /> */}
-        <Slider />
+        <ProductsList />
+        {/* <Slider /> */}
         {isShowPopup ? (
           <OrderPopup
             listOrder={filters}

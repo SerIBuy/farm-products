@@ -43,20 +43,19 @@ export default function ProductTabs({ product }) {
           productTabs.map((tab, index) => {
             if (index === activeTab) {
               return (
-                <ProductTabItem>
-                  <ProductTab activetabstyle={activeTabStyle} key={index}>
+                <ProductTabItem key={index}>
+                  <ProductTab activetabstyle={activeTabStyle}>
                     {tab.title}
                   </ProductTab>
                 </ProductTabItem>
               );
             }
             return (
-              <ProductTabItem>
+              <ProductTabItem key={index}>
                 <ProductTab
                   as="button"
                   style={buttonStyle}
                   onClick={() => setActiveTab(index)}
-                  key={index}
                 >
                   {tab.title}
                 </ProductTab>

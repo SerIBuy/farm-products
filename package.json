@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "@svgr/cli": "^8.1.0",
-    "@svgr/webpack": "^8.1.0"
+    "@svgr/webpack": "^8.1.0",
+    "react-router-dom": "^6.26.2"
   }
 }

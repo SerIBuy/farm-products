@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-const Styledheader = styled.header`
-  position: sticky;
-  top: 0;
+const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,4 +8,4 @@ const Styledheader = styled.header`
   background-color: #fff;
 `;
 
-export default Styledheader;
+export default StyledHeader;

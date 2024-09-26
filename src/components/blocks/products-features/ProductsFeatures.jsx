@@ -8,6 +8,7 @@ import {
 } from "./styled";
 import { FeaturesContext } from "../features-context";
 import { useContext } from "react";
+import { AppRoute } from "../../../const";
 
 export default function ProductsFeatures() {
   const features = useContext(FeaturesContext);
@@ -21,7 +22,7 @@ export default function ProductsFeatures() {
           </ProductsFeaturesItem>
         ))}
       </ProductsfeaturesList>
-      <Button>Купить</Button>
+      <Button link={AppRoute.BUY}>Купить</Button>
     </StyledProductsFeatures>
   );
 }

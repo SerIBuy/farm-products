@@ -1,3 +1,4 @@
+import { type } from "@testing-library/user-event/dist/type";
 import { StyledButton } from "./styled";
 
 export default function Button({
@@ -9,7 +10,13 @@ export default function Button({
   return (
     <StyledButton
       onClick={onButtonClick}
-      {...(link ? { href: link, as: "a" } : { type: "button" })}
+      {...(link
+        ? { to: link }
+        : {
+            as: "button",
+            type: "button",
+            style: { border: "none", cursor: "pointer" },
+          })}
       disabled={buttonDisabling}
     >
       {children}
