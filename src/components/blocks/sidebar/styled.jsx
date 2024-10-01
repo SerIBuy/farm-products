@@ -7,6 +7,6 @@ export const StyledSideBar = styled.aside`
   flex-direction: column;
   gap: 18px;
 
-  position: sticky;
-  top: 90px;
+  /* position: sticky;
+  top: 90px; */
 `;

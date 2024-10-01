@@ -10,6 +10,9 @@ const StyledProductsList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 12px;
+  width: 744px;
+  height: 700px;
+  overflow-y: scroll;
 `;
 
 export { StyledProductsList };

@@ -6,5 +6,6 @@ export const MainBuyPage = styled.div`
   grid-template-columns: repeat(2, auto);
   width: 1100px;
   margin: 0 auto;
-  padding: 40px 90px;
+  padding: 40px 90px 8px;
+  background-color: rgba(246, 246, 246, 1);
 `;
