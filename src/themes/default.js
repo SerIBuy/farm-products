@@ -1,7 +1,6 @@
 export const defaultTheme = {
   colorBlackText: "#333333",
   colorTextWhite: "#ffffff",
-  colorButtons: "#fc9b27",
   colorButtonsHover: "#fc7427",
   colorLightBlue: "#d8ecfe",
   colorLightGreen: "#e1edce",
